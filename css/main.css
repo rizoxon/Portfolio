@@ -46,6 +46,10 @@ nav > ul > a{
     border: 1px solid var(--green);
     padding: 10px 15px;
     border-radius: 5px;
+    transition: 0.5s;
+}
+nav > ul > a:hover{
+    background-color: rgba(100, 255, 218, 0.1);
 }
 nav > ul > li > a{
     color: var(--litest-slate);
