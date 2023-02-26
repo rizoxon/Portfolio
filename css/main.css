@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+:root{
+    --navy: #0a192f;
+    --light-navy: #112240;
+    --lightest-navy: #233554;
+    --slate: #8892b0;
+    --lite-slate: #a8b2d1;
+    --litest-slate: #ccd6f6;
+    --white: #e6f1ff;
+    --green: #64ffda;
+}
+
+*{
+    padding: 0;margin: 0;box-sizing: border-box;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+body{
+    background: var(--light-navy);
+}
+
+/* Navbar */
+nav{
+    position: fixed;
+    top: 0;left: 0;
+    width: 100%;
+    height: 80px;
+    backdrop-filter: blur(3px);
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+nav > ul {
+    display: flex;
+    align-items: center;
+}
+nav > ul > li {
+    list-style: none;
+}
+nav > ul > a{
+    color: var(--green);
+    text-decoration: none;
+    border: 1px solid var(--green);
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+nav > ul > li > a{
+    color: var(--litest-slate);
+    padding: 0 20px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+nav > ul > li > a:hover{
+    color: var(--green);
+}
+nav > ul > li > a > span {
+    color: var(--green);
+}
+nav > a{
+    font-size: 1.2em;
+    color: var(--green);
+    text-decoration: none;
+}
