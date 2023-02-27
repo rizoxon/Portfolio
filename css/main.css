@@ -21,6 +21,12 @@
     background-color: var(--green);
     color: var(--navy);
 }
+/* Scroll */
+/* width */
+::-webkit-scrollbar {
+    display: none;
+}
+
 body{
     min-height: 100vh;
     background: var(--navy);
@@ -43,6 +49,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     transition: 0.5s;
+    z-index: 100;
 }
 nav > ul {
     display: flex;
