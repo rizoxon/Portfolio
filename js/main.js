@@ -11,3 +11,19 @@ window.addEventListener('scroll', () => {
     }
     lastScrollTop = scrollTop
 })
+
+
+//////////////////////////// Cursor
+const cursor = document.querySelector('body > .cursor')
+
+document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.pageX + 'px'
+    cursor.style.top = e.pageY + 'px'
+})
+
+document.addEventListener('click', () => {
+    cursor.classList.add('cursor-expand')
+    setTimeout(() => {
+        cursor.classList.remove('cursor-expand')
+    }, 500)
+})

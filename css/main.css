@@ -17,7 +17,7 @@
 }
 
 body{
-    background: var(--light-navy);
+    background: var(--navy);
 }
 
 /* Navbar */
@@ -47,9 +47,22 @@ nav > ul > a{
     padding: 10px 15px;
     border-radius: 5px;
     transition: 0.5s;
+    animation-delay: 1s;
 }
 nav > ul > a:hover{
     background-color: rgba(100, 255, 218, 0.1);
+}
+nav > ul > li:nth-child(1){
+    animation-delay: 0.2s;
+}
+nav > ul > li:nth-child(2){
+    animation-delay: 0.4s;
+}
+nav > ul > li:nth-child(3){
+    animation-delay: 0.6s;
+}
+nav > ul > li:nth-child(4){
+    animation-delay: 0.8s;
 }
 nav > ul > li > a{
     color: var(--litest-slate);
@@ -67,4 +80,70 @@ nav > a{
     font-size: 1.2em;
     color: var(--green);
     text-decoration: none;
+}
+
+
+
+/* Cursor */
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 1;
+
+    animation: cursorAnim .5s infinite alternate;
+    border: 1px solid var(--litest-slate);
+}
+@keyframes cursorAnim {
+    from {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    to {
+        transform: translate(-50%, -50%) scale(.7);
+    }
+}
+
+.cursor::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 8px solid var(--litest-slate);
+    opacity: 0.2;
+    border-radius: 50%;
+    top: -9px;
+    left: -9px;
+
+    animation: cursorAnim2 .5s infinite alternate;
+}
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.4);
+    }
+}
+
+.cursor-expand {
+    animation: cursorAnim3 .5s forwards;
+    border: 1px solid var(--green);
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform:translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform:translate(-50%, -50%) scale(3);
+    }
+    100%{
+        transform:translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
 }
