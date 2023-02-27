@@ -90,7 +90,7 @@ nav > a{
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    transition-duration: 200ms;
+    transition-duration: 30ms;
     transition-timing-function: ease-out;
     transform: translate(-50%, -50%);
     pointer-events: none;
@@ -146,4 +146,52 @@ nav > a{
         transform:translate(-50%, -50%) scale(1);
         opacity: 0;
     }
+}
+
+
+
+/* Social Media | aside */
+.social-media{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100px;
+    height: 300px;
+    animation-delay: 2s;
+}
+
+.social-media > a{
+    font-size: 20px;
+    color: var(--litest-slate);
+    margin: 20px 0;
+    transition: .5s;
+}
+.social-media > a:hover{
+    color: var(--green);
+    transform: translate(0, -10px);
+}
+
+.email-aside{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 300px;
+    animation-delay: 2s;
+}
+.email-aside > a {
+    transform: rotate(90deg);
+    text-decoration: none;
+    color: var(--litest-slate);
+    transition: .5s;
+}
+.email-aside > a:hover{
+    color: var(--green);
+    transform:rotate(90deg) translate(-10px,0);
 }
