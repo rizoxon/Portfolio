@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
 
 :root{
     --navy: #0a192f;
@@ -15,9 +17,18 @@
     padding: 0;margin: 0;box-sizing: border-box;
     font-family: 'Ubuntu Mono', monospace;
 }
-
+::selection{
+    background-color: var(--green);
+    color: var(--navy);
+}
 body{
+    min-height: 100vh;
     background: var(--navy);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 100px;
 }
 
 /* Navbar */
@@ -194,4 +205,42 @@ nav > a{
 .email-aside > a:hover{
     color: var(--green);
     transform:rotate(90deg) translate(-10px,0);
+}
+
+
+
+/* /////////////////////////////////////////////// About */
+main {
+    width: 100%;
+    height: 70vh;
+    /* background-color: var(--slate); */
+    margin: 50px 0;
+}
+.hero{
+    width: 90%;
+}
+.hero > p:nth-child(1){
+    font-size: 20px;
+    color: var(--green);
+    padding: 15px 0;
+}
+.hero > h3 {
+    font-weight: 100;
+    color: var(--litest-slate);
+    font-size: 60px;
+    font-family: 'Monoton', cursive;
+    display: flex;
+    flex-direction: column;
+}
+.hero > h3 > span {
+    color: var(--slate);
+    font-size: 40px;
+    font-family: 'Rubik Mono One', sans-serif;
+    margin: 0 0 15px 0;
+}
+.hero > p {
+    color: var(--slate);
+    width: 60%;
+    line-height: 25px;
+    margin: 15px 0;
 }
